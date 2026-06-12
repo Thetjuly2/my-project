@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+}
+
+#gameArea {
+    position: absolute;
+    display: grid;
+}
+
+#mycanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.buttom{
+    padding-left: 1170px;
+    margin-top: 695px;
+    position: absolute;
+    
+    /* display: none; */
+    
+}
+.homr{
+    padding: 5px 20px; 
+    font-size: 25px;
+    border: 5px solid rgb(29, 31, 127);
+    background-color: rgb(155, 173, 197);
+}

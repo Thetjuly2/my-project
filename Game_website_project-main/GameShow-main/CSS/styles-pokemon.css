@@ -1,0 +1,65 @@
+body {
+    background-image: url(../assets/land.png);
+    background-size: cover;
+}
+
+.player {
+    /* 220px in X * 90px in Y*/
+    background-image: url(../assets/player_front.png);
+    width: 73px;
+    height: 90px;
+
+    /* to set the photo position = 240px in x direction 'full photo width' */
+    background-size: 220px 100%;
+    background-position-x: 148px;
+    position: fixed;
+    z-index: 10000;
+}
+
+.grass {
+    background-image: url(../assets/grass.png);
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    position: fixed;
+
+}
+
+.ball {
+    background-image: url(../assets/pokeball.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    position: fixed;
+
+}
+
+.score {
+    z-index: 1000;
+    position: absolute;
+    font-size: 50px;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(229, 237, 234);
+    background-color: rgb(46, 25, 103);
+    display: inline;
+    padding: 20px 20px 20px 20px;
+    margin-left: 0px;
+}
+.button {
+    background-color: #aa2504; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  

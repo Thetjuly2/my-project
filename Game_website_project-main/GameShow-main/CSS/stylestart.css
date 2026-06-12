@@ -1,0 +1,32 @@
+div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 97vh;
+   
+}
+
+img{
+    position: absolute;
+}
+
+.btn{
+   
+    border-radius: 180px;
+    border: 1px solid rgb(29, 28, 28);
+    width: 250px;
+    height: 250px;
+    font-size: 50px;
+    color: rgb(242, 201, 119);
+    background-image: url("../IMG/red_maroon_pattern_84406514.webp");
+    cursor: pointer;
+    box-shadow: -5px 5px black, -5px 5px black, -5px 5px black;
+   
+}
+
+body{
+    
+    background-image: url("../IMG/background-with-flying-letters.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

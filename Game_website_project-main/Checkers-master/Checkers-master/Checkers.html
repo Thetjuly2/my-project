@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers by Einav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Checkers.css">
+    <style>
+        .nav{
+            display: flex;
+            width: 1470px;
+            height: 60px;
+            background-color: #212529;
+            color: white;
+            margin-top: -10px;
+            padding-left: -20px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .nav .data a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 300;
+            color: white;
+        }
+        .nav .data a:hover{
+            transform: scale(0.96);
+            color: blue!important;
+        }
+        .nav .data span a{
+            padding: 0px 10px;
+            font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+        }
+        .data{
+            padding-left: 1000px;
+            padding-top: 20px;
+        }
+        .nav .name{
+            font-size: 20px;
+            padding-left:20px;
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="name">
+            <p>Gamics</p>
+        </div>
+        <div class="data">
+            <span><a href="/Game_website_project-main/gamics-master/index.html">Home</a></span>
+            <span><a href="/Game_website_project-main/gamics-master/index.html#game2">Game</a></span>
+            <span><a href="/Game_website_project-main/gamics-master/index.html#features">Features</a> </span>
+            <span><a href="/Game_website_project-main/gamics-master/index.html#footer">Contact</a></span>
+        </div>
+    </div>
+    <div style ="display: none;"><button class="btn" type="button" id="home-btn"></button> <button class="btn" type="button" id="new-game-btn"></button><button class="btn" type="button"
+        id="instructions-btn"></button></div>
+    <div class="flex-container">
+        <div>
+            <h2 class="turn-indicator-text">Player 2</h2>
+            <div id="board" class="flex-container-board">
+            </div>
+            <h2 class="turn-indicator-text">Player 1</h2>
+        </div>
+    </div>
+   
+    <script src="Checkers.js"></script>
+</body>
+
+</html>

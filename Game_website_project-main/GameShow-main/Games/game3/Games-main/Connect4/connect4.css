@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    place-items: center;
+    background-color: bisque;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    border: 2px solid black;
+   width: 900px;
+   background-color: rgb(74, 74, 198);
+    margin-top: -80px;
+  
+}
+
+ul{
+    display: grid;
+    place-items: center;
+    
+}
+
+ul p{
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: white;
+}
+
+ul:hover{
+    cursor: pointer;
+    background-color: rgb(98, 136, 238);
+}
+
+
+@media(max-width:700px){
+    .board{
+        width: 500px;
+    }
+    ul p{
+        width: 55px;
+        height: 55px;
+        
+    }
+    
+}
+@media(max-width:520px){
+    .board{
+        width: 400px;
+    }
+    ul p{
+        width: 40px;
+        height: 40px;
+        
+    }
+    
+}
+@media(max-width:420px){
+    .board{
+        width: 320px;
+    }
+    ul p{
+        width: 30px;
+        height: 30px;
+        
+    }
+    
+}
+/* .btn-home{
+    padding: 10px 30px;
+    background-color:yellowgreen;
+    border: none;
+    color:white;
+    margin-bottom: 20px;
+  }
+  .home-button{
+    margin-right: 40px;
+  }
+  .home-button button{
+    margin-top: 25px;
+    /* margin-left: 100px;
+    margin-right: 100px; 
+    border-radius: 10px;
+  }
+  .home-button button:hover{
+    transform: scale(1.1);
+  }
+  .home-button a{
+    margin-left: 100px;
+    margin-right: 90px;
+  } */
+
+  #diceCont {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 650px;
+    left: 50px;
+    font-size: 2rem;
+    z-index: 99;
+  }
+  #diceBtn {
+    z-index: 99;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(75, 140, 197);
+    border-radius: 50px;
+    width: 200px;
+    border:none;
+  }
+  .hh .oo:hover{
+    transform: scale(0.96);
+    color: blue!important;
+  }

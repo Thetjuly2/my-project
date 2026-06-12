@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+      .nav{
+          display: flex;
+          width: 1470px;
+          height: 60px;
+          background-color: #212529;
+          color: white;
+          margin-top: -10px;
+          padding-left: -20px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+      }
+      .nav .data a{
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 300;
+          color: white;
+      }
+      .nav .data a:hover{
+          transform: scale(0.96);
+          color: blue!important;
+      }
+      .nav .data span a{
+          padding: 0px 10px;
+          font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+      }
+      .data{
+          padding-left: 1000px;
+          padding-top: 20px;
+      }
+      .nav .name{
+          font-size: 20px;
+          padding-left:20px;
+      }
+  </style>
+  </head>
+  <body onclick="printID(this.id);">
+    <div class="nav">
+      <div class="name">
+          <p>Gamics</p>
+      </div>
+      <div class="data">
+          <span><a href="/Game_website_project-main/gamics-master/index.html">Home</a></span>
+          <span><a href="/Game_website_project-main/gamics-master/index.html#game2">Game</a></span>
+          <span><a href="/Game_website_project-main/gamics-master/index.html#features">Features</a> </span>
+          <span><a href="/Game_website_project-main/gamics-master/index.html#footer">Contact</a></span>
+      </div>
+  </div>
+  <div><h1 class="header">Chess</h1></div>
+    <div class="overlay hidden">
+      <div class="checkmate">
+        <div class="checkmate-text"><h1>CHECKMATE</h1></div>
+        <div class="winner-text"></div>
+        <div class="playagain">
+          <button class="playagain-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <div class="outercontainer">
+      <div class="innercontainer">
+<!--         <div class="row white" id="box-0-0">♜</div>
+        <div class="row black" id="box-0-1">♞</div>
+        <div class="row white" id="box-0-2">♝</div>
+        <div class="row black" id="box-0-3">♛</div>
+        <div class="row white" id="box-0-4">♚</div>
+        <div class="row black" id="box-0-5">♝</div>
+        <div class="row white" id="box-0-6">♞</div>
+        <div class="row black" id="box-0-7">♜</div>
+
+        <div class="row black" id="box-1-0">♟︎</div>
+        <div class="row white" id="box-1-1">♟︎</div>
+        <div class="row black" id="box-1-2">♟︎</div>
+        <div class="row white" id="box-1-3">♟︎</div>
+        <div class="row black" id="box-1-4">♟︎</div>
+        <div class="row white" id="box-1-5">♟︎</div>
+        <div class="row black" id="box-1-6">♟︎</div>
+        <div class="row white" id="box-1-7">♟︎</div>
+
+        <div class="row white" id="box-2-0"></div>
+        <div class="row black" id="box-2-1"></div>
+        <div class="row white" id="box-2-2"></div>
+        <div class="row black" id="box-2-3"></div>
+        <div class="row white" id="box-2-4"></div>
+        <div class="row black" id="box-2-5"></div>
+        <div class="row white" id="box-2-6"></div>
+        <div class="row black" id="box-2-7"></div>
+
+        <div class="row black" id="box-3-0"></div>
+        <div class="row white" id="box-3-1"></div>
+        <div class="row black" id="box-3-2"></div>
+        <div class="row white" id="box-3-3"></div>
+        <div class="row black" id="box-3-4"></div>
+        <div class="row white" id="box-3-5"></div>
+        <div class="row black" id="box-3-6"></div>
+        <div class="row white" id="box-3-7"></div>
+
+        <div class="row white" id="box-4-0"></div>
+        <div class="row black" id="box-4-1"></div>
+        <div class="row white" id="box-4-2"></div>
+        <div class="row black" id="box-4-3"></div>
+        <div class="row white" id="box-4-4"></div>
+        <div class="row black" id="box-4-5"></div>
+        <div class="row white" id="box-4-6"></div>
+        <div class="row black" id="box-4-7"></div>
+
+        <div class="row black" id="box-5-0"></div>
+        <div class="row white" id="box-5-1"></div>
+        <div class="row black" id="box-5-2"></div>
+        <div class="row white" id="box-5-3"></div>
+        <div class="row black" id="box-5-4"></div>
+        <div class="row white" id="box-5-5"></div>
+        <div class="row black" id="box-5-6"></div>
+        <div class="row white" id="box-5-7"></div>
+
+        <div class="row white" id="box-6-0">♙</div>
+        <div class="row black" id="box-6-1">♙</div>
+        <div class="row white" id="box-6-2">♙</div>
+        <div class="row black" id="box-6-3">♙</div>
+        <div class="row white" id="box-6-4">♙</div>
+        <div class="row black" id="box-6-5">♙</div>
+        <div class="row white" id="box-6-6">♙</div>
+        <div class="row black" id="box-6-7">♙</div>
+
+        <div class="row black" id="box-7-0">♖</div>
+        <div class="row white" id="box-7-1">♘</div>
+        <div class="row black" id="box-7-2">♗</div>
+        <div class="row white" id="box-7-3">♕</div>
+        <div class="row black" id="box-7-4">♔</div>
+        <div class="row white" id="box-7-5">♗</div>
+        <div class="row black" id="box-7-6">♘</div>
+        <div class="row white" id="box-7-7">♖</div> -->
+      </div>
+    </div>
+    <div class="overlay2 hidden">
+      <div class="pawnPromo">
+        <div class="pawnPromo-text">
+          <h2>Pawn is Promoted please choose:</h2>
+        </div>
+        <div class="chessofficials"></div>
+      </div>
+
+   
+
+    </div>
+    <div class="dot-container" style="text-align: center">
+        <span style="margin-left: 10px"> Theme: </span>
+        <span
+          class="dot"
+          style="background-color: saddlebrown"
+          onclick="theme(0)"
+        ></span>
+        <span
+          class="dot"
+          style="background-color: rgb(148, 148, 148)"
+          onclick="theme(1)"
+        ></span>
+        <span
+          class="dot"
+          style="background-color: #0a85ae"
+          onclick="theme(2)"
+        ></span>
+        <span
+          class="dot"
+          style="background-color: red"
+          onclick="theme(3)"
+        ></span>
+      </div>
+    <div class="checktext hidden"><h2>Check!</h2></div>
+    <div class="player-container-outer">
+        <div class="player-container-inner">
+          <div class="player white1" id="whiteP">Player 1♔</div>
+          <div class="player black1" id="blackP">Player 2♚</div>
+        </div>
+        <div class="chess-peice-container">
+          <div class="whiteP"></div>
+          <div class="blackP"></div>
+        </div>
+      </div>
+      <div class="timercontainer player1">
+          <p class="timer" id="whiteP-timer">
+          
+          </p>
+      </div>
+      <div class="timercontainer player2">
+
+        <p class="timer" id="blackP-timer">
+            
+        </p>
+      </div>
+      <div class="back-button">
+        <a href="/Game_website_project-main/GameShow-main/Games/game3/Games-main/ChessGame-master/index.html" ><button class="btn-home" style="border-radius: 20px;padding: 15px 45px; font-size: 15px;">Restart</button></a>
+      </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

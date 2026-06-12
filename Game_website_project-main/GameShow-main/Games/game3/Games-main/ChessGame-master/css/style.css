@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css2?family=Bayon&display=swap); @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+  
+body {
+  font-family: 'Bayon', display;
+}
+html{
+    height: 100%;
+    width: auto;
+}
+body{
+    display: grid;
+    background-repeat: no-repeat;
+     background: linear-gradient(rgba(99, 87, 76, 0.295), #8835056b), url('../images/chess.jpg');
+    background-size: cover;
+    height: 100%;
+    background-position: center bottom;
+    grid-template-rows: 0vw 34vw 0vw 6vw 3vw 1vw 3vw auto;
+    
+}
+.hh .oo:hover{
+  transform: scale(0.96);
+  color: blue!important;
+}
+.header{
+  text-align: center;
+  margin-top: -470px;
+  font-size: 40px;
+  color: white;
+}
+.outercontainer{
+    display: block;
+    grid-template-columns: 32vw;
+    grid-template-rows: 32vw;
+    justify-content: center;
+    grid-row-start: 2;
+    background-color:red;
+    padding: 1vw;
+    height: 475px;
+    margin-top: 87px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset -1px 1px 7px rgba(0,0,0,.2), 
+    inset 1px -1px 7px rgba(0,0,0,.2), 
+    1px 12px 5px rgba(0,0,0,.4), 
+    4px 3px 8px rgba(0,0,0,.4), 
+    5px 10px 10px rgba(0,0,0,.2), 
+    -5px 10px 10px rgba(0,0,0,.4);
+    
+}
+.checktext{
+  grid-row-start: 5;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 18px;
+}
+.hidden{
+  display: none;
+}
+.innercontainer{
+    display: grid;
+    grid-template-columns: repeat(8,4vw);
+    grid-template-rows: repeat(8,4vw);
+    justify-content: center;
+
+}
+.player-container-outer{
+  display: grid;
+  grid-row-start: 4 ;
+  justify-content: center;
+  grid-template-columns:32vw;
+  grid-template-rows: 2vw 4vw;
+  margin-top:83px ;
+
+}
+.player-container-inner{
+  display: grid;
+  grid-template-columns: repeat(2,16vw);
+  grid-template-rows: repeat(1,3vw);
+  justify-content: center;
+  grid-row-start: 1 ;
+}
+.chess-peice-container{
+  display: grid;
+  grid-template-columns: repeat(2,16vw);
+  grid-template-rows: repeat(1,4vw);
+  grid-row-start: 2;
+  font-size: 1.5vw;
+  text-align: center;
+}
+.blackP{
+  display: grid;
+  grid-template-columns: repeat(8,2vw);
+  grid-template-rows: repeat(2,2vw);
+}
+.whiteP{
+  display: grid;
+  grid-template-columns: repeat(8,2vw);
+  grid-template-rows: repeat(2,2vw);
+}
+.black{
+    background-color:#cf5742;
+}
+.white{
+    background-color: rgb(247, 247, 247);
+}
+.row{
+    font-size: 3vw;
+    text-align: center;
+    cursor: pointer;
+}
+.dot-container{
+    display: block;
+    grid-row-start: 6;
+    margin: auto;
+    display: flex;
+    width: 30vw;
+    padding: 0.2vw;
+    border-radius: 10px;
+    background-color: rgba(255, 254, 253,0.4);
+    font-size: 2vw;
+    /* margin-top: 10px; */
+
+}
+.dot {
+    position: relative;
+    height: 1.5vw;
+    width: 1.5vw;
+    margin: auto;
+    border-radius: 50%;
+    border:3px solid rgb(8, 5, 5);  
+    transition: background-color 0.6s ease; 
+}
+  
+  .dot:hover{
+    height: 2vw;
+    width: 2vw;
+  }
+  .active {
+    background-color: #717171;
+  }
+  .select{
+    box-shadow: 0 0 12px rgba(27, 228, 0, 0.7) inset;
+    border: 1px solid rgba(255,255,255,1);
+  }
+
+  .redselect{
+    box-shadow: 0 0 12px rgba(228, 0, 0, 0.7) inset;
+    border: 1px solid rgba(255,255,255,1);
+  }
+
+  .player{
+    font-size: 1.5vw;
+    font-weight: 1000;
+    font-family: 'Alex Brush', handwriting;
+    }
+
+
+  .white1{
+    text-align: left;
+    color: white;
+  }
+  .active{
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 2vw;
+  }
+  .green{
+    box-shadow: 0 0 12px rgba(213, 224, 54, 0.7) inset;
+    border: 1px solid rgba(255,255,255,1);
+  }
+  .red{
+    box-shadow: 0 0 12px rgba(238, 145, 23, 0.7) inset;
+    border: 1px solid rgba(255,255,255,1);
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+.checkmate{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
+}
+.checkmate-text h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 72px;
+}
+.winner-text{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+.playagain-btn{
+  position: absolute;
+  left: 50%;
+  margin-top: 20px;
+  transform: translate(-50%,0%);
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+}
+.overlay2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.726);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.pawnPromo  {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
+}
+.pawnPromo-text {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+.chessofficials{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  font-size: 40px;
+  justify-content: space-evenly;
+}
+.promopawn:hover{
+  font-size: 50px;
+  cursor: pointer;
+}
+.timercontainer{
+  width: max-content;
+  height: max-content;
+  padding: 5px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  display: none;
+}
+
+.player1{
+  background-color: white;
+}
+.player2{
+  background-color: black;
+  color: white;
+}
+.btn-home{
+  padding: 10px 10px;
+  background-color:sienna;
+  border: none;
+  color:white;
+}
+.back-button{
+  margin-left: 300px;
+
+  display: grid;
+}
+/* .home-button .back-button button{
+  margin-top: 25px;
+  /* margin-left: 100px;
+  margin-right: 100px; 
+  border-radius: 30px;
+} */
+.back-button button:hover{
+  transform: scale(1.1);
+}
+.home-button button:hover{
+  transform: scale(1.1);
+}
+/* .home-button a{
+  margin-left: 30px;
+  margin-right: 90px; }
+  */
+
+.back-button{
+  margin-left: 1080px;
+  padding-top: 70px;
+}
+.btn-home{
+  padding-top:260px;
+  padding-right: 220px;
+}
+/* .home-button{
+  padding-left:230px ;
+  padding-top: 160px;
+} */
+.hh .oo:hover{
+  transform: scale(0.96);
+  color: blue!important;
+}

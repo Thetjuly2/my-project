@@ -1,0 +1,87 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 96vh;
+    /* background: rgb(49, 94, 94); */
+    background-image: url("../IMG/background-with-flying-letters.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parent{
+    width:450px;
+    /* background-color: cadetblue; */
+    background-color:#801e05 ;
+    border-radius: 50px;
+}
+
+.parent h1{
+    font-weight:500 ;
+    font-size: 25px;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ccc;
+    color: rgb(242, 201, 119);
+}
+
+.parent .content{
+    margin: 25px 25px 35px ;
+}
+
+.content .inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputs input{
+    height: 55px;
+    width: 40px;
+    margin:5px;
+    border-radius: 15px;
+    background-color: none;
+    border: 1px solid #ccc;
+    font-size:25px;
+    font-weight: 500px;
+    text-align: center;
+    color:rgb(242, 201, 119);
+    text-transform: uppercase;
+}
+
+.inputs input:first-child{
+    margin-left: 0px;
+}
+
+.content .details{
+    margin: 20px 0 25px;
+    color: rgb(242, 201, 119);;
+}
+
+.details p{
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.content .reset-btn{
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    border: none;
+    padding: 15px 0;
+    cursor: pointer;
+    color: rgb(18, 21, 20);
+    /* background: rgb(104, 175, 178); */
+    background-color:rgb(168, 68, 25);;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    color: rgb(242, 201, 119);
+   
+}
+
+.content .typing{
+z-index:-999 ;
+opacity: 0;
+justify-content: center;
+}
+
+
